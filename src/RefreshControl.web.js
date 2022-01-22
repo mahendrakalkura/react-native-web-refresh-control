@@ -50,7 +50,6 @@ export default function RefreshControl({
     Animated.timing(pullDownSwipeMargin.current, {
       toValue: refreshing ? 50 : 0,
       duration: 350,
-      useNativeDriver: false,
     }).start()
     if (refreshing) {
       pullPosReachedState.current = 0
@@ -66,7 +65,6 @@ export default function RefreshControl({
       Animated.timing(pullDownSwipeMargin.current, {
         toValue: 0,
         duration: 350,
-        useNativeDriver: false,
       }).start()
     }
   }, [])
